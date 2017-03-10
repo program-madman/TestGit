@@ -1,0 +1,3 @@
+configurations.create("default")
+artifacts.add("default", file('rxjava-1.1.3.jar'))
+task testClasses {}
