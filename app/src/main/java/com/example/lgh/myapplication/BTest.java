@@ -29,7 +29,5 @@ public class BTest extends AppCompatActivity {
 
         // hahahhhhahah~~~~~~~~~~
 
-        //vivivivi
-        //viviviviivivivi
     }
 }
