@@ -16,19 +16,7 @@ public class BTest extends AppCompatActivity {
         setContentView(R.layout.activity_main_b);
         MediaSessionCompat c;
         //hahaha
-        //tititi
-        //back？？？？？？
-        //ddd
-        //abcd
-        //last
-
-        // hhhhh ;
-
-        //last hhhhhh;
-        //last dev
-
-        // hahahhhhahah~~~~~~~~~~
-        // master
+        
 
     }
 }
