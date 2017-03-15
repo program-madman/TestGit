@@ -17,6 +17,24 @@ public class BTest extends AppCompatActivity {
         MediaSessionCompat c;
         //hahaha
         
+        //tititi
+        //back？？？？？？
+        //ddd
+        //abcd
+        //last
+        //yayyay
+        // hhhhh ;
 
+        //last hhhhhh;
+        //last dev
+        //
+        // hahahhhhahah~~~~~~~~~~
+        // master
+
+        //merge
+        //merge
+        // new
+        //sssss
+        //1234567
     }
 }
