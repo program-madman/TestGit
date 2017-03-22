@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
+import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
 import rx.functions.Action0;
@@ -195,6 +196,19 @@ public class MainActivity extends AppCompatActivity {
         Observable o2 = Observable.just(1,2,3);
 
        // Observable.just(1).reduce()
+
+        Observable<Filter> o = Observable.just(new Filter("1"),new Filter("2"),new Filter("3"),new Filter("3"),new Filter("3"),new Filter("4"));
+        o.distinctUntilChanged(new Func1<Filter, String>() {
+            @Override
+            public String call(Filter filter) {
+                return filter.s;
+            }
+        }).last().debounce(200, TimeUnit.MILLISECONDS).subscribe(new Action1<Filter>() {
+            @Override
+            public void call(Filter filter) {
+                Log.d("lgh",filter.toString()+"<<<");
+            }
+        });
     }
 
     public static class AA {
@@ -233,6 +247,20 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    //var x : Int = -1;
+
+    private static class Filter {
+        public String s;
+
+        public Filter(String s) {
+            this.s = s;
+        }
+
+        @Override
+        public String toString() {
+            return "Filter{" +
+                    "s='" + s + '\'' +
+                    '}';
+        }
+    }
 
 }
